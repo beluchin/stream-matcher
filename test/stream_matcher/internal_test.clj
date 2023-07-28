@@ -73,9 +73,9 @@
                  {:side :left
                   :data-and-time-vec [[:d1 :t1] [:d2 :t2]]})))))
 
-  #_(t/testing "record the event as pending"
-    (t/is (= {:side :left
-              :data-and-time-vec [[:d1 :t1] [:d2 :t2]]}
+  (t/testing "record the event as pending"
+    (t/is (= {:pending {:side :left
+                        :data-and-time-vec [[:d1 :t1] [:d2 :t2]]}}
 
              (sut/event-outcome
                {:side :left

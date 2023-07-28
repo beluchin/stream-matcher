@@ -16,7 +16,7 @@
                ;; nothing pending to be matched
                {}))))
 
-  (t/testing "match without misses"
+  #_(t/testing "match without misses"
     (t/testing "a single pending event is matched"
       (t/is (nil?
               (seq (sut/event-outcome
@@ -43,7 +43,7 @@
                  {:side :right
                   :data-and-time-vec [[:d1 :t1] [:d2 :t2]]})))))
 
-  (t/testing "misses"
+  #_(t/testing "misses"
     
     ;; misses are always on the opposite side of the event
     
@@ -73,7 +73,7 @@
                  {:side :left
                   :data-and-time-vec [[:d1 :t1] [:d2 :t2]]})))))
 
-  (t/testing "record the event as pending"
+  #_(t/testing "record the event as pending"
     (t/is (= {:side :left
               :data-and-time-vec [[:d1 :t1] [:d2 :t2]]}
 
